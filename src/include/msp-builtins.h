@@ -10,7 +10,7 @@
       "pushm.a #1, r13\n" \
       "mov     %[count], r13\n" \
       "dec     r13\n" \
-      "jnz     $+2\n" \
+      "jnz     $-2\n" \
       "popm.a  #1, r13\n" \
       "nop\n" \
       : : [count] "i" ((n) / 3 - 3) \
