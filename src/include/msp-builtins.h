@@ -13,7 +13,7 @@
       "jnz     $+2\n" \
       "popm.a  #1, r13\n" \
       "nop\n" \
-      : : [count] "i" (n / 3 - 3) \
+      : : [count] "i" ((n) / 3 - 3) \
     )
 
 #define __bic_SR_register_on_exit(bits) \
