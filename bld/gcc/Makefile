@@ -6,6 +6,6 @@ OBJECTS = \
 include $(MAKER_ROOT)/Makefile.gcc
 
 CFLAGS += \
-	-I ../../src/include \
+	-I ../../src/include/libmspbuiltins \
 
 VPATH = ../../src
