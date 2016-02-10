@@ -6,4 +6,4 @@ OBJECTS = \
 CFLAGS += \
 	-I ../../src/include/libmspbuiltins \
 
-SRC_ROOT = ../../src
+override SRC_ROOT = ../../src
