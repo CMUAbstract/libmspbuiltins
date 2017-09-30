@@ -18,7 +18,7 @@
 
 #define __bic_SR_register_on_exit(bits) \
     __asm__ volatile ( \
-        "bic     %[b],    24(r1)\n" \
+        "bic     %[b],    8(r1)\n" \
         : : [b] "i" (bits) \
     )
 
