@@ -16,9 +16,11 @@
       : : [count] "i" ((n) / 3 - 3) \
     )
 
+// NOTE: This code assumes that clang compiles functions to start
+// with a prologue (push r4; mov r1, r4).
 #define __bic_SR_register_on_exit(bits) \
     __asm__ volatile ( \
-        "bic     %[b],    8(r1)\n" \
+        "bic     %[b],    2(r4)\n" \
         : : [b] "i" (bits) \
     )
 
