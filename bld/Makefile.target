@@ -6,8 +6,8 @@ else # TOOLCHAIN != gcc
 
 # libedb is special because it has to be compiled by GCC, not Clang,
 # even if the app is built with Clang
-CFLAGS += -I$(LIB_ROOT)/libmspbuiltins/src/include
-LFLAGS += -L$(LIB_ROOT)/libmspbuiltins/bld/gcc
+override CFLAGS += -I$(LIB_ROOT)/libmspbuiltins/src/include
+override LFLAGS += -L$(LIB_ROOT)/libmspbuiltins/bld/gcc
 LIBS += -lmspbuiltins
 
 endif # TOOLCHAIN != gcc
