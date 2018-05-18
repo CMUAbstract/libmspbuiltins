@@ -3,8 +3,6 @@
 
 #include <stdint.h>
 
-#ifdef __clang__
-
 #define __delay_cycles(n) \
     __asm__ volatile ( \
       "pushm.a #1, r13\n" \
@@ -21,8 +19,6 @@
         "bic     %[b],    24(r1)\n" \
         : : [b] "i" (bits) \
     )
-
-#endif // __clang__
 
 // These are fake "built-ins" for Clang: implemented in C in a trivial way, and
 // compiled with gcc. We do this because it is easier than implementing actual
