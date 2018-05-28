@@ -2,7 +2,7 @@ LIB = libmspbuiltins
 
 OBJECTS =
 
-include $(MAKER_ROOT)/Makefile.version
+include $(MAKER_ROOT)/Makefile.version.clang
 
 ifneq ($(call version-lt,$(CLANG_VERSION),5.0.0),)
 OBJECTS += arithmetic.o
